@@ -7,6 +7,8 @@ sass-loader node-sass -D
 
 webdatavisualdev / [vue-tradingview](https://github.com/webdatavisualdev/vue-tradingview)
 [初识TradingView图表库](https://aitrade.ga/books/proficient-tradingview/book/01-Introduction.html)
+[Advanced Real-Time Chart Widget](https://www.tradingview.com/widget/advanced-chart/)
+[How to integrate trading view charting library in my website](https://stackoverflow.com/questions/48839896/how-to-integrate-trading-view-charting-library-in-my-website)
 
 ## Project setup
 ```

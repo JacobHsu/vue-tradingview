@@ -88,7 +88,23 @@ export default class TradingViewComponent extends Vue {
     this.feed = this.createFeed()
 
     TradingView.onready((configurationData: any) => {
-      this.chart = new TradingView.widget({
+      const widgetOptions = {
+        symbol: 'TSLA',
+        interval: 'D',
+        container_id: 'tv_chart_container',
+        library_path: '/charting_library/',
+
+        locale: 'en',
+        disabled_features: [],
+        enabled_features: ['study_templates'],
+        client_id: 'tradingview.com',
+        user_id: 'public_user_id',
+        fullscreen: false,
+        autosize: true,
+        studies_overrides: {},
+        theme: 'Dark'
+      }
+      const widgetOptions1 = {
         fullscreen: false,
         autosize: true,
         symbol: this.currency1 + ':' + this.currency2,
@@ -264,7 +280,8 @@ export default class TradingViewComponent extends Vue {
           'mainSeriesProperties.areaStyle.transparency': 80
         },
         custom_css_url: 'chart.css'
-      })
+      }
+      this.chart = new TradingView.widget(widgetOptions)
     })
   }
 
